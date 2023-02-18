@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto+Condensed:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 46px;
+    font-family: 'Gochi Hand', cursive;
+}
+
+.world-map {
+    width: 1000px;
+}
+
+.flag {
+    width: 20px;
+    margin: 0 10px 0 0;
+}
+
+.population {
+    margin: 0 0 12px 0;
+    font-size: 10px;
+}
+
+
+.region.blue {
+    color: blue;
+}
+
+.region.green {
+    color: green;
+}
+
+.region.red {
+    color: red;
+}
+
+.region.yellow {
+    color: yellow;
+}
+
+.region.purple {
+    color: purple;
+}
+
+.region.default {
+    color: black;
+}
