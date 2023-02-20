@@ -10,7 +10,7 @@ async function fetchData () {
         countries.sort((a, b) => {return a.population - b.population;});
 
         const countryMap = countries.map((country) => {
-            return `<li> <img src="${country.flag}" alt="The national flag of ${country.name}" id="flag">
+            return `<li> <img class="flag" src="${country.flag}" alt="The national flag of ${country.name}" id="flag">
               <p class="region ${getRegionClass(country.region)}">${country.name}</p>
               <p class="population"> Has a population of ${country.population} people</p>
               </li>`
