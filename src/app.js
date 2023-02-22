@@ -11,7 +11,7 @@ async function fetchData () {
 
         const countryMap = countries.map((country) => {
             return `<li> <img class="flag" src="${country.flag}" alt="The national flag of ${country.name}" id="flag">
-              <p class="region ${getRegionClass(country.region)}">${country.name}</p>
+              <p class="region ${getColor(country.region)}">${country.name}</p>
               <p class="population"> Has a population of ${country.population} people</p>
               </li>`
         });
@@ -25,7 +25,7 @@ async function fetchData () {
 
 fetchData();
 
-function getRegionClass(currentRegion) {
+/*function getRegionClass(currentRegion) {
     switch (currentRegion) {
         case 'Africa':
             return 'blue';
@@ -40,10 +40,10 @@ function getRegionClass(currentRegion) {
         default:
             return 'default';
     }
-}
+}*/
 
 
-/*function getColor(currentRegion) {
+function getColor(currentRegion) {
     const colors = {
         'Africa': 'blue',
         'Americas': 'green',
@@ -52,5 +52,23 @@ function getRegionClass(currentRegion) {
         'Oceania': 'purple'
     };
     return colors[currentRegion] || 'default';
+}
+
+// Andere optie //
+/*function getRegionClass(currentRegion) {
+    switch (currentRegion) {
+        case 'Africa':
+            return 'blue';
+        case 'Americas':
+            return 'green';
+        case 'Asia':
+            return 'red';
+        case 'Europe':
+            return 'yellow';
+        case 'Oceania':
+            return 'purple';
+        default:
+            return 'default';
+    }
 }*/
 

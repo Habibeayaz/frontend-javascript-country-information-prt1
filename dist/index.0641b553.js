@@ -570,7 +570,7 @@ async function fetchData() {
         });
         const countryMap = countries.map((country)=>{
             return `<li> <img class="flag" src="${country.flag}" alt="The national flag of ${country.name}" id="flag">
-              <p class="region ${getRegionClass(country.region)}">${country.name}</p>
+              <p class="region ${getColor(country.region)}">${country.name}</p>
               <p class="population"> Has a population of ${country.population} people</p>
               </li>`;
         });
@@ -581,30 +581,46 @@ async function fetchData() {
     }
 }
 fetchData();
-function getRegionClass(currentRegion) {
-    switch(currentRegion){
-        case "Africa":
-            return "blue";
-        case "Americas":
-            return "green";
-        case "Asia":
-            return "red";
-        case "Europe":
-            return "yellow";
-        case "Oceania":
-            return "purple";
+/*function getRegionClass(currentRegion) {
+    switch (currentRegion) {
+        case 'Africa':
+            return 'blue';
+        case 'Americas':
+            return 'green';
+        case 'Asia':
+            return 'red';
+        case 'Europe':
+            return 'yellow';
+        case 'Oceania':
+            return 'purple';
         default:
-            return "default";
+            return 'default';
     }
-} /*function getColor(currentRegion) {
+}*/ function getColor(currentRegion) {
     const colors = {
-        'Africa': 'blue',
-        'Americas': 'green',
-        'Asia': 'red',
-        'Europe': 'yellow',
-        'Oceania': 'purple'
+        "Africa": "blue",
+        "Americas": "green",
+        "Asia": "red",
+        "Europe": "yellow",
+        "Oceania": "purple"
     };
-    return colors[currentRegion] || 'default';
+    return colors[currentRegion] || "default";
+} // Andere optie //
+ /*function getRegionClass(currentRegion) {
+    switch (currentRegion) {
+        case 'Africa':
+            return 'blue';
+        case 'Americas':
+            return 'green';
+        case 'Asia':
+            return 'red';
+        case 'Europe':
+            return 'yellow';
+        case 'Oceania':
+            return 'purple';
+        default:
+            return 'default';
+    }
 }*/ 
 
 },{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jo6P5":[function(require,module,exports) {
